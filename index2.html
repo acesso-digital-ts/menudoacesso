@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/PJfzwWcj/icon-acessodigital.png">
+  <title>Acesso Digital</title>
+
+  <style>
+    .versao{
+      position: fixed;
+      font-size: 0.7vw;
+      top: 0;
+      left: 0;
+    }
+    body {
+      background-image: url('https://i.postimg.cc/L56w1CHs/PRINT-TELA-CHEIA-1.png');
+      background-repeat: repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .menutitulo {
+      text-align: center;
+      font-size: 5vw;
+
+    }
+    @media screen and (min-height: 0px){
+      .menutitulo {
+        font-size: 20px;
+      }
+
+      a img {
+        width: 10vw;
+        max-width: 250px;
+        min-width: 100px;
+        margin: 10px;
+        transition: transform 0.3s;
+      }
+
+      a img:hover {
+        transform: scale(1.1);
+      }
+
+      .bt_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .button-with-icon .icon {
+        font-size: 8px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+    @media screen and (min-height: 600px){
+      .menutitulo {
+        font-size: 36px;
+      }
+
+      a img {
+        width: 12.5vw;
+        max-width: 250px;
+        min-width: 100px;
+        margin: 10px;
+        transition: transform 0.3s;
+      }
+
+      a img:hover {
+        transform: scale(1.1);
+      }
+
+      .bt_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .button-with-icon .icon {
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    
+    @media screen and (min-height: 900px) {
+      .menutitulo {
+        font-size: 36px;
+      }
+
+      a img {
+        width: 20vw;
+        max-width: 250px;
+        min-width: 100px;
+        margin: 10px;
+        transition: transform 0.3s;
+      }
+
+      a img:hover {
+        transform: scale(1.1);
+      }
+
+      .bt_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .button-with-icon .icon {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+
+
+      .button-with-icon {
+        position: relative;
+        display: inline-block;
+      }
+
+      .modal-informacao{
+        text-align: justify;
+        padding: 5%;
+        padding-top: 0%;
+      }
+
+      .icon {
+        transition: transform 0.3s;
+      }
+
+      .icon:hover {
+        transform: scale(1.1);
+      }
+
+      .button-with-icon .icon {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        background-color: #ffea31;
+        color: #000000;
+        font-weight: bold;
+        border-radius: 50%;
+        /*
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .divtop{
+       justify-content: center;
+       display: flex;
+       margin: auto;
+       margin-top: 50px;
+       padding: auto;
+       gap: 100px;
+      }
+
+      .divtop a{
+        width: auto;
+        height: auto;
+      }
+
+      .top{
+        width: 206px;
+        margin: 0px 10px 10px 10px;
+      }
+      .btn-cartao-top{
+        max-width: 206px;
+      }
+  </style>
+
+
+</head>
+
+
+<body>
+  <p class="versao">Ultima alteração 04/07/2025</p>
+  <center>
+
+    <h1 id="rainbow-text" class="menutitulo">
+
+      <font class="rainbow" color="#FFFFFF" face="Trebuchet MS, sans-serif">
+        <b>ACESSO DIGITAL - MENU</b>
+      </font>
+    </h1>
+
+  </center>
+  <div class="bt_container">
+
+    <!--1-->
+
+    
+    <!--gov-->
+    <a href="https://www.gov.br/pt-br" target="_blank" class="button-with-icon">
+      <img src="https://i.postimg.cc/KjDyPYVT/bt-gov.png" alt="bt-gov" title="Acesso GOV.BR" />
+      <span id="sp_gov"class="icon" onclick="abrirInformativo(event)" 
+      data-title="GOV.BR"
+      data-content="  
+      <br><p>Para a maioria dos acessos em sites federais, é necessário que o
+      cidadão tenha a senha do portal GOV.COM.<br>
+      Somente com senha é possível acessar todos os serviços e
+      programas para o cidadão.</p>
+
+      <br>
+      <p><b>IMPORTANTE!</b> Caso o cidadão tenha esquecido a senha do
+      portal GOV, o primeiro passo é clicar em “esqueci minha senha”.
+      É necessário pular as etapas (reconhecimento facial e recuperar
+      através da conta bancária) e verificar se o cidadão reconhece e tem
+      acesso ao e-mail e telefone cadastrados para recuperação de senha.
+      Se o cidadão não tiver acesso ao e-mail e senha, é necessário
+      encaminhá-lo ao INSS para a retirada de uma nova senha
+      provisória para posteriormente cadastrar uma nova senha e
+      conseguir acessar o perfil do cidadão.</p>
+      <p>No caso de <b>recuperação de senha</b>, o portal irá gerar um
+      questionário sobre a vida trabalhista e previdenciária da pessoa.
+      Caso ele responda alguma questão errada, o <b>acesso será
+      bloqueado</b> por 24h. Nesse caso, a forma mais fácil é encaminhar a
+      pessoa para o INSS e retirar nova senha provisória, para que não
+      ocorra outro erro.</p>
+      "
+      >?</span>
+    </a>
+
+    <!--inss-->
+    <a href="https://meu.inss.gov.br/#/login" target="_blank" class="button-with-icon">
+      <img src="https://i.postimg.cc/4yBQsDXx/bt-inss.png" alt="bt-inss" title="Acesso Meu INSS" />
+      <span class="icon" onclick="abrirInformativo(event)"
+      data-title="Meu INSS"
+      data-content="
+        <h4>BPC/LOAS – Benefício de Prestação Continuada (Idoso)</h4>
+        <p>É um benefício que concede 1 salário mínimo por mês para a
+        pessoa idosa de baixa renda.<br>
+      
+        Para ter direito ao benefício não é necessário ter contribuído para
+        o INSS. No entanto, não dá direito ao 13º salário e não deixa
+        pensão por morte.</p>
+          
+        <p>Para solicitar o benefício, é necessário:<br></p>
+        <ul>
+          <li>Possuir senha do portal GOV.COM;</li>
+          <li>Ter 65 anos ou mais;</li>
+          <li>Ser brasileiro nato ou naturalizado;</li>
+          <li>Ter renda familiar de até ¼ do salário mínimo por pessoa,
+          calculada com as informações do Cadastro Único (CadÚnico) e
+          dos sistemas do INSS.</li>
+        </ul>
+        <p>O Cadastro Único, que é administrado pelos CRAS, deve estar
+        atualizado há menos de dois anos e conter o CPF de todas as
+        pessoas da família.</p>
+          <br>
+
+        <h4>BPC/LOAS – Benefício de Prestação Continuada à Pessoa com
+        Deficiência</h4>
+        <p><b>* Importante! Caso o benefício seja solicitado para um menor de idade,
+        será necessário anexar <b>termo de responsabilidade</b> e a <b>biometria</b> do responsável legal. </b></p>
+        <p>É o benefício que concede 1 salário mínimo por mês para a pessoa
+        com deficiência e que comprove ser baixa renda.<br>
+        Para ter direito ao benefício não é necessário ter contribuído para
+        o INSS.<br>
+        No entanto, não dá direito ao 13º salário e não deixa pensão por
+        morte.</p>
+        <p>Para solicitar o benefício, é necessário:<br></p>
+        <ul>
+          <li>Possuir senha do portal GOV.COM;
+          <li>Laudo com CID que comprove a deficiência e a incapacidade para
+          <li>vida social e laboral;
+          <li>Ser brasileiro nato ou naturalizado;
+          <li>Ter renda familiar de até ¼ do salário mínimo por pessoa,
+          calculada com as informações do Cadastro Único (CadÚnico) e
+          dos sistemas do INSS.
+        </ul>
+        <p>O Cadastro Único, que é administrado pelos CRAS, deve estar
+        atualizado há menos de dois anos e conter o CPF de todas as
+        pessoas da família.</p>
+        <b><p>* Importante! O Cadastro Único deve ser atualizado a cada dois
+        anos ou sempre que houver qualquer alteração (mudança de
+        endereço, telefone, renda ou composição familiar.</p></b>
+        <p>Sempre que um BPC for concedido, é necessário informar ao
+        cidadão que é necessário ir ao CRAS atualizar o CadÚnico para
+        fazer a alteração da renda familiar.</p>
+        <br>
+        <h4>Benefício por Incapacidade Temporária (Auxílio-doença)</h4>
+        <p>Benefício para pessoa que comprove, por meio de perícia médica,
+        por mais de 15 dias seguidos, estar incapaz para o trabalho ou
+        atividade habitual de forma temporária.</p>
+        <p><b>* Importante! Durante a perícia médica será avaliado o benefício
+        devido, temporário (auxílio-doença) ou permanente (aposentadoria
+        por invalidez). </b></p>
+        <br>
+        <h4>Benefício por Incapacidade Permanente (Aposentadoria por
+        Invalidez)</h4>
+        <p>Benefício para pessoa que comprove, por meio de perícia médica,
+        estar incapaz para o trabalho ou atividade habitual de forma
+        permanente.</p>
+        <p><b>* Importante! Durante a perícia médica será avaliado o benefício
+        devido, temporário (auxílio-doença) ou permanente (aposentadoria
+        por invalidez). </b></p>
+          <br>
+        <h4>Simulação de Aposentadoria</h4>
+        <p>É o serviço que ajuda a saber quanto tempo falta para se aposentar
+        (por idade ou tempo de contribuição). </p>
+        <p>A simulação é feita com as informações que estão na base de
+        dados do INSS. </p>
+        <p>O resultado gerado pela calculadora vale somente para consulta e
+        não garante direito à aposentadoria. </p>
+          <br>
+        <h4>Emissão de Extrato de Contribuição – CNIS</h4>
+        <p>É o documento que informa todos os vínculos, remunerações e
+        contribuições previdenciárias, encontrados no Cadastro Nacional
+        de Informações Sociais (CNIS). </p>
+      "
+      >?</span>
+
+    </a>
+
+    <!--ctps-->
+    <a href="https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho" target="_blank" class="button-with-icon">
+      <img src="https://i.postimg.cc/fb1ZZpmV/ctps.png" alt="ctps" title="Acesso Carteira de Trabalho Digital" />
+      <span class="icon" onclick="abrirInformativo(event)" 
+      data-title="Carteira de Trabalho e Previdência Social"
+      data-content="
+        <br><p>A Carteira de Trabalho e Previdência Social (CTPS) é o
+        documento que registra a vida profissional do trabalhador e
+        garante acesso aos direitos trabalhistas previstos em lei. A carteira
+        de trabalho será emitida de forma prioritária no formato digital e,
+        excepcionalmente no formato físico para anotações de vínculos
+        anteriores a instituição do modelo digital.</p>
+        
+       ">?</span>
+      </a>
+
+      <!--Seguro Desemprego - Imagem Imgur -->
+    <a href="https://servicos.mte.gov.br/spme-v2/#/seguro-desemprego" target="_blank" class="button-with-icon"><img src="https://i.postimg.cc/y8D8BnfP/btn-segurodesemprego.png"
+        width="13%" hspace="20" alt="bt-segurodesemprego" title="Seguro Desemprego" />
+        <span class="icon" onclick="abrirInformativo(event)" 
+        data-title="CTPS - Seguro Desemprego"
+        data-content="
+        <br>
+        <h4>Seguro Desemprego</h4>
+        <p>É um benefício da Seguridade Social e tem a finalidade de garantir
+        assistência financeira temporária ao trabalhador dispensado
+        involuntariamente (sem justa causa). </p>
+        <p>Condições:</p>
+        <ul>
+        <li>a) não possuem renda própria que seja suficiente à sua
+          manutenção e de sua família.
+        <li>b) receberam salários de pessoa jurídica ou de pessoa física a ela
+          equiparada, relativos a:
+          <ul>
+            <li>pelo menos <b>12 meses nos últimos 18 meses</b> imediatamente
+            anteriores à data de dispensa, quando da primeira solicitação: ou
+            <li>pelo menos <b>9 meses nos últimos 12 meses</b> imediatamente
+            anteriores à data de dispensa, quando da segunda solicitação: ou
+            <li>cada um dos <b>6 meses </b>imediatamente anteriores à data da
+            dispensa, quando das demais solicitações.
+          </ul>
+            <li>c) não recebem qualquer benefício previdenciário de prestação
+          continuada com exceção do auxílio-acidente, do auxílio
+          suplementar e do abono de permanência em serviço.
+        </ul>
+        <p>O trabalhador terá direito ao valor da sua parcela a cada trinta dias
+        se forem atendidos os critérios estabelecidos em lei.</p>
+        <p>O recebimento digital será feito na seguinte ordem, por meio de:</p>
+        <ul>
+          <li>a) depósito em conta e banco informados pelo próprio trabalhador;
+          <li>b) depósito em conta poupança de titularidade do trabalhador
+          identificada na CAIXA;
+          <li>c) depósito em conta poupança social digital da CAIXA.
+        </ul>
+        <p>Caso o trabalhador não tenha informado os dados de conta e
+        banco ou não possua conta poupança na CAIXA, o recebimento
+        será feito por meio de:</p>
+        <ul>
+        <li>a) terminais de autoatendimento, lotéricas e casas de conveniência
+        da CAIXA com o cartão cidadão;
+        <li>b) agências da CAIXA, com apresentação de documentos de
+        identificação e número de CPF.
+        </ul>
+        ">?</span>
+        </a>
+
+      
+    
+    <!--etitulo biometria-->
+    <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/atendimento-eleitor" class="button-with-icon"
+      target="_blank"><img src="https://i.postimg.cc/WpYhgd9j/bt-etitulo.png" alt="top"
+        title="E-Titulo Biometria" />
+        <span class="icon" onclick="abrirInformativo(event)" 
+      data-title="E-Titulo - Recuperar Biometria"
+      data-content="
+      <br>
+      <p>No Acesso Digital, utilizamos o site do Tribunal Superior Eleitoral (TSE) como uma ferramenta prática e eficiente para recuperar a biometria do título de eleitor de munícipes.
+       Esse processo é simples e rápido, facilitando o atendimento e a atualização de dados eleitorais.</p>
+       ">?</span>
+        </a>
+
+    <!--carteira do idoso-->
+    <a href="https://carteiraidoso.cidadania.gov.br/" target="_blank" class="button-with-icon"><img
+        src="https://i.postimg.cc/xC0BfTHF/bt-carteiradoidoso.pngS" width="13%" hspace="20" alt="bt_carteiraidoso"
+        title="Emitir Carteira do Idoso" />
+        <span id="sp_gov"class="icon" onclick="abrirInformativo(event)"
+        data-title="Carteira do Idoso"
+        data-content="
+        <br>
+        <p>A carteira da Pessoa Idosa é uma das formas de comprovação de
+        renda para acessar o direito do acesso a transporte interestadual
+        gratuito (duas vagas por veículo) ou desconto de 50%, no mínimo,
+        no valor das passagens para pessoas idosas com renda individual
+        igual ou inferior a dois salários mínimos. </p>
+        <p>A carteira da Pessoa Idosa tem as informações de identificação da
+        pessoa e QR Code ou código alfanumérico para verificação da
+        validade da carteira.</p>
+        <p>Para ter direito à Carteira do Idoso é necessário ter 60 anos ou
+        mais, possuir a senha do portal GOV, estar cadastrada no
+        CadÚnico e ter renda individual de até 2 salários mínimos.</p>
+        "
+        >?</span>
+        </a>
+
+    <!--2-->
+
+    <!--agendamento top-->
+    <a href="https://ribo286.gendo.app/#/" onclick="opcoesTop(event)" target="_blank"><img src="https://i.postimg.cc/RhBBJtP9/top.png" alt="top"
+        title="Agendamento TOP" /></a>
+
+    <!--Agendamento Top Idoso 60-64-->
+    <a href="https://vpirajucara.com.br/agendamento/" class="button-with-icon"  target="_blank"><img
+        src="https://i.postimg.cc/g2TCKPCx/bt-pirajussara.png" alt="bt-pirajussara"
+        title="Agendamento TOP Idoso 60 - 64 anos" />
+        <span class="icon" onclick="abrirInformativo(event)" 
+        data-title="Agendamento Top Idoso 60 - 64 anos"
+        data-content="
+        <br>
+        <p>
+          Site utilizado para agendamento de cartão TOP para pessoas entre 60 - 64 anos
+        </p>
+         ">?</span>
+      </a>
+
+    <!--Bilhete Unico-->
+    <a href="https://bilheteunico.sptrans.com.br/especial/pessoa-idosa/" target="_blank"><img
+        src="https://i.postimg.cc/TYXMmXPT/bt-bilhete.png" alt="bt-bilhete" title="SPTrans Bilhete Unico" /></a>
+
+    <!--Passe Livre-->
+    <a href="https://passelivre.antt.gov.br/" target="_blank" class="button-with-icon">
+      <img src="https://i.postimg.cc/jjjr5QSN/bt-passe-LIVRE.png" alt="bt-passe-LIVRE" title="Passe Livre" />
+      <span class="icon" onclick="abrirInformativo(event)" 
+      data-title="Passe Livre"
+      data-content="
+      <br>
+      <p>O Passe Livre é um benefício do Ministério da Infraestrutura que
+      garante à pessoa com deficiência, comprovadamente carente, o
+      acesso gratuito ao transporte coletivo interestadual por rodovia,
+      ferrovia e barco.</p>
+      <p>O requerente ao benefício deve possuir renda familiar, por pessoa,
+      de até 1 salário mínimo e comprovar ser Pessoa com Deficiência.</p>
+      <p>Documentação necessária:</p>
+      <ul>
+        <li>Carteira de Identidade ou CNH;
+        <li>Certidão de Nascimento (para menores de 12 anos);
+        <li>Atestado/Relatório Médico Padrão do Passe Livre;
+        <li>1 foto 3x4;
+        <li>Se o requerente for menor de idade e o pai ou mãe não forem os
+        responsáveis legais, é necessário que seja encaminhado o Termo
+        de Guarda, Tutela ou Curatela.
+      </ul>
+      <p>Caso necessite de acompanhante, no atestado da Equipe
+      Multiprofissional deverá constar a indicação médica da
+      necessidade do acompanhante.<p>
+      "
+      >?</span>
+      </a>
+
+      <!--Alistamento-->
+    <a href="https://alistamento.eb.mil.br/" target="_blank"><img src="https://i.postimg.cc/DzRx1Wd6/ALISTAMENTO-BT.png"
+        width="13%" hspace="20" alt="ALISTAMENTO-BT" title="Alistamento Militar Online" /></a>
+
+    <!--sistema identificação autista-->
+    <a href="https://cadpcd.ts.sp.gov.br/" target="_blank"><img src="https://i.postimg.cc/Vs3G2hTn/cart-autbt.png"
+        width="13%" hspace="20" alt="cartaut-BT" title="Sistema de Identificação do Autista" /></a>
+
+    <!--poupatempo-->
+    <a href="https://www.poupatempo.sp.gov.br/wps/portal/poupatempoTaOn/homeTaOn/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zi_TxcjDxM3A38DTycXA0Cw4w9DYIsg4wNfAz1wwkpiAJKG-AAjgZA_VFgJbhMCDWDKsBjRkFuhEGmo6IiAFl6Ge8!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"
+      target="_blank"><img src="https://i.postimg.cc/FRcvKpVD/poupat.png" alt="poupat" title="Acesso PoupaTempo" /></a>
+
+    
+    <!--3-->
+
+    <!--Atende-->
+    <a href="https://atende.ts.sp.gov.br/" target="_blank"><img src="https://i.postimg.cc/59LRqmrC/ATENDE-BT.png"
+        width="13%" hspace="20" alt="ATENDE-BT" title="Atende Taboão da Serra" /></a>
+
+    <!--SERASA-->
+    <a href="https://www.serasa.com.br/entrar" target="_blank"><img src="https://i.postimg.cc/RhKhNm2L/btn-serasa.png"
+      width="13%" hspace="20" alt="SERASA-BT" title="Acesso Serasa" /></a>
+
+    <!--Guia previdencia-->
+    <a href="https://sal.rfb.gov.br/PortalSalInternet/faces/pages/index.xhtml" target="_blank"><img
+        src="https://i.postimg.cc/nzy80yYY/bt-guia-Recolhimento.png" alt="bt-guia-Recolhimento"
+        title="Guia Previdência Social" /></a>
+
+    <!--Boletim de Ocorrencia-->
+    <a href="https://www.delegaciaeletronica.policiacivil.sp.gov.br/ssp-de-cidadao/pages/comunicar-ocorrencia"
+      target="_blank"><img src="https://i.postimg.cc/8CngrJ7Y/bt-BO.png" alt="bt-BO"
+        title="Policia Civil Delegacia Eletrônica" /></a>
+
+    <!--Cadastro Unico-->
+    <a href="https://cadunico.dataprev.gov.br/#/home" target="_blank"><img
+        src="https://i.postimg.cc/przw7ssN/bt-meucad.png" alt="bt-meucad" title="Acesso Meu Cadastro Único" /></a>
+
+    <!--Impressão Comprovante-->
+    <a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/impressaocomprovante/consultaimpressao.asp"
+      target="_blank"><img src="https://i.postimg.cc/bwghpFpp/bt-CPF.png" alt="bt-CPF"
+        title="Impressão do Comprovante de Inscrição no CPF Receita Federal" /></a>
+
+    <!--Formulario de contato ministerio da fazenda-->
+    <a href="https://www.gov.br/trabalho-e-emprego/pt-br/canais_atendimento/formulario-de-contato" target="_blank"><img
+        src="https://i.postimg.cc/cHgy7xYL/bt-formulario-MTP.png" alt="bt-formulario-MTP"
+        title="Formulário atendimento Ministério do Trabalho" /></a>
+
+   
+    <!--4-->
+
+    <!--pje-->
+    <a href="https://pje1g.trf3.jus.br/pje/login.seam" target="_blank"><img
+        src="https://i.postimg.cc/YCM7cwcd/bt-pje.png" alt="bt-pje" title="Processo Judicial Eletrônico" /></a>
+
+    <!--Receita Federal-->
+    <a href="https://servicos.receita.fazenda.gov.br/Servicos/saga/agendamento/" target="_blank"><img
+        src="https://i.postimg.cc/sfWCv2sn/bt-receita.png" alt="bt-receita" title="Receita Federal" /></a>
+
+    <!--Serviços Eleitorias-->
+    <a href="https://www.tse.jus.br/servicos-eleitorais/certidoes/certidao-de-quitacao-eleitoral" target="_blank"><img
+        src="https://i.postimg.cc/WpqTgn6w/bt-titulo.png" alt="bt-titulo"
+        title="TSE - Serviços Eleitorais Titulo" /></a>
+
+    <!--justiça federal-->
+    <a href="https://web.trf3.jus.br/peticoesjef/Atermacoes/" target="_blank"><img
+        src="https://i.postimg.cc/vHGyQWgt/jef.png" alt="jef" title="Justiça Federal" /></a>
+
+    <!--cadUnico Caixa-->
+    <a href="https://login.caixa.gov.br/auth/realms/internet/protocol/openid-connect
+    /auth?response_type=code&client_id=cli-web-dun&redirect_uri=https%3A%2F%2Fwww.cadastrounico.caixa.gov
+    .br%2Fcadun%2F&state=f89f2de4-f828-4304-a63a-ec2cd20a0f6d&login=true&scope=openid
+" target="_blank"><img src="https://i.postimg.cc/wjffT41S/CAD-BT.png" width="13%" hspace="20" alt="CAD-BT"
+        title="Cadastro Unico Acesso Caixa" />
+        </a>
+
+    <!--Webcam Toy Brinque com mais de 80 efeitos-->
+    <a href="https://webcamtoy.com/pt/" target="_blank"><img src="https://i.postimg.cc/Yqck3WdK/bt-webcam.png"
+        alt="bt-webcam" title="WebCam Toy - Brinque com mais de 80 ótimos efeitos!" /></a>
+
+         <!--Photopea-->
+    <a href="https://www.photopea.com/" target="_blank" class="button-with-icon"><img
+      src="https://i.postimg.cc/7ZrNJrL7/bt-photopea.png" width="13%" hspace="20" alt="bt_photopea"
+      title="Photopea - Editor de Imagens Online" />
+      <span class="icon" onclick="abrirInformativo(event)" 
+      data-title="Photopea Editor de Imagens"
+      data-content="
+      <br>
+      <p>O Photopea é um editor de imagens online gratuito e avançado que oferece funcionalidades semelhantes às do Adobe Photoshop. 
+        Ele suporta diversos formatos de arquivos, como PSD, XD, Sketch, JPG, PNG e outros, permitindo a edição de camadas, 
+        ajustes, filtros e ferramentas avançadas para design gráfico e edição fotográfica diretamente no navegador, sem a necessidade de instalação de software.<p>
+      "
+      >?</span>
+    </a>
+    <!--5-->
+
+
+    <!--iLovePDF-->
+    <a href="https://www.ilovepdf.com/pt" target="_blank"><img src="https://i.postimg.cc/QxpDndzB/bt-pdf.png"
+        alt="bt-pdf" title="iLovePDF - Editar arquivos PDF" /></a>
+
+    <!--gmail-->
+    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img
+        src="https://i.postimg.cc/k5290q6r/bt-gmail.png" alt="bt-gmail" title="Gmail" /></a>
+
+    <!--drive-->
+    <a href="https://drive.google.com/drive/my-drive" target="_blank"><img
+        src="https://i.postimg.cc/L86QSF8t/DRIVE-BT.png" width="13%" hspace="20" alt="DRIVE-BT"
+        title="Google Drive" /></a>
+
+    <!--outlook-->
+    <a href="https://outlook.live.com/owa/" target="_blank"><img src="https://i.postimg.cc/Xvr2ZKFX/HOTMAIL-BT.png"
+        width="13%" hspace="20" alt="HOTMAIL-BT" title="Microsoft Outook" /></a>
+
+    <!--webmail-->
+    <a href="https://webmail.ts.sp.gov.br/" target="_blank"><img src="https://i.postimg.cc/7h3tHxzV/WEBMAIL-BT.png"
+        width="13%" hspace="20" alt="WEBMAIL-BT" title="Webmail" /></a>
+
+    <!--doweb-->
+    <a href="https://webappdocweb.doctecnologia.com/a0HomePage" target="_blank"><img
+        src="https://i.postimg.cc/mgL9yvYW/bt-docwebpng.png" width="13%" hspace="20" alt="bt_docweb"
+        title="DocWeb Portal do Cliente" /></a>
+
+    
+    <!--6-->
+
+    <!--Sistema de Ordem de Serviço-->
+    <a href="https://suporte.ts.sp.gov.br/" target="_blank"><img src="https://i.postimg.cc/9F2Nx73N/GLPI-BT.png"
+        width="13%" hspace="20" alt="GLPI-BT" title="Sistema de Ordem de Serviço" /></a>
+
+    <!--iFractal-->
+    <a href="https://awstou.ifractal.com.br/ifPonto/prefeiturataboaodaserra/" target="_blank"><img
+        src="https://i.postimg.cc/15K7b3sR/IFRACTAL-BT.png" width="13%" hspace="20" alt="IFRACTAL-BT"
+        title="iFractal Ponto Eletrônico" /></a>
+        
+    <!--holerite-->
+    <a href="https://novoportal.conam.com.br/rhtaboao/login.php" target="_blank"><img
+        src="https://i.postimg.cc/L5WtbN23/bt-holerite.png" width="13%" hspace="20" alt="bt_holerite"
+        title="2° Via do Holerite" /></a>
+
+
+
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Título do Modal</h4>
+        </div>
+        <div class="modal-body modal-informacao">
+          <p>Conteúdo do modal será exibido aqui.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Modal Top-->
+   <div class="modal fade" id="ModalTop" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Agendamento TOP - Selecionar tipo de cartão</h4>
+        </div>
+        <div class="modal-body modal-informacao">
+         <div class="divtop">
+          <div>
+            <a href="https://ribo286.gendo.app/#/"  target="_blank"><img title="Agendamento TOP SEM Chip" class="btn-cartao-top" src="https://i.postimg.cc/DyND09Lm/cartao-TOP-semchip.png"></a>
+            
+          </div>
+          
+          <div>
+            <a  href="https://vico158.gendo.app/#/"  target="_blank"><img title="Agendamento TOP COM Chip" class="btn-cartao-top" src="https://i.postimg.cc/CMm9TBKG/cartao-TOP-Mastercard-internacional.png"></a>
+          </div>
+         </div> 
+         
+        </div>
+        <center> <a href="https://segundavia.prd.tmob.autopasscorp.com"  target="_blank" title="Gerar pix para pagamento segunda via top">Solicite a 2 via do cartão TOP - Gere o PIX - AUTOPASS</a>
+        </center>
+       <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+</html>
+
+<script>
+  const rainbowText = document.querySelector('.rainbow');
+  const colors = [
+    '#FF0000', '#FF3F00', '#FF7F00', '#FFBF00',
+    '#FFFF00', '#BFFF00', '#7FFF00', '#00FF00',
+    '#00FF7F', '#00FFFF', '#007FFF', '#0000FF',
+    '#4B0082', '#9400D3', '#800080'
+  ];
+
+  let index = 0;
+
+  function changeColor() {
+    rainbowText.style.color = colors[index];
+    index = (index + 1) % colors.length;
+  }
+
+  setInterval(changeColor, 200); // Intervalo reduzido para mais fluidez
+
+
+
+  function abrirInformativo(event) {
+    event.preventDefault();
+
+    const span = event.target;
+
+    const title = span.getAttribute('data-title');
+    const content = span.getAttribute('data-content');
+
+    const modalTitle = document.querySelector('#myModal .modal-title');
+    const modalBody = document.querySelector('#myModal .modal-body p');
+    modalTitle.textContent = title;
+    modalBody.textContent = content;
+
+    modalBody.innerHTML = content;
+
+    $('#myModal').modal('show');
+  }
+
+  function opcoesTop(event){
+    event.preventDefault();
+
+    const span = event.target;
+
+    $('#ModalTop').modal('show');
+  }
+
+
+
+</script>
